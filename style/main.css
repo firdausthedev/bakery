@@ -24,6 +24,44 @@
   padding: 0 15px;
 }
 
+h2 {
+  font-size: 2rem;
+  font-family: myFirstFont;
+  font-weight: 100;
+  letter-spacing: 2px;
+  color: var(--dark-text);
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.max-w-6 {
+  max-width: 600px;
+}
+
+.max-w-6 {
+  max-width: 600px;
+}
+
+.max-w-4 {
+  max-width: 250px;
+}
+
+.text-center {
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+  color: #676f75;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-family: "Montserrat", sans-serif;
+  color: #414141;
+  text-transform: uppercase;
+}
+
 header {
   height: 100vh;
   background: rgb(116, 164, 197);
@@ -129,23 +167,6 @@ header nav ul h1 {
   align-items: center;
 }
 
-#features .container h2 {
-  font-size: 2rem;
-  font-family: myFirstFont;
-  font-weight: 100;
-  letter-spacing: 2px;
-  color: var(--dark-text);
-}
-
-#features .container > p {
-  margin-top: 1rem;
-  font-size: 1rem;
-  font-family: "Montserrat", sans-serif;
-  color: #676f75;
-  max-width: 600px;
-  text-align: center;
-}
-
 #features .container .lists {
   margin-top: 2.5rem;
   display: flex;
@@ -156,13 +177,6 @@ header nav ul h1 {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-}
-
-#features .container .lists .list h3 {
-  font-size: 1.2rem;
-  font-family: "Montserrat", sans-serif;
-  color: #414141;
-  text-transform: uppercase;
 }
 
 #features .container .lists .list p {
@@ -194,7 +208,7 @@ header nav ul h1 {
 
 #stats img {
   position: absolute;
-  width: 550px;
+  width: 500px;
   left: 0;
   top: 0;
   margin-left: -100px;
@@ -272,4 +286,43 @@ header nav ul h1 {
   right: 0;
   font-family: "Montserrat", sans-serif;
   color: var(--light-color);
+}
+
+#products {
+  background: var(--light-color);
+  padding: 4rem 0;
+}
+
+#products .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#products .container .rows {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4rem;
+  gap: 50px;
+}
+
+#products .container .rows .row {
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+}
+
+#products .container .rows .item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+
+#products .container .rows .item img {
+  width: 120px;
+  height: 120px;
+  border-radius: 100%;
 }
