@@ -120,7 +120,7 @@ header nav ul h1 {
 
 #features {
   background: var(--light-color);
-  padding: 2rem 0;
+  padding: 4rem 0;
 }
 
 #features .container {
@@ -177,4 +177,99 @@ header nav ul h1 {
   width: 200px;
   height: 200px;
   border-radius: 100%;
+}
+
+#stats {
+  background: rgb(116, 164, 197);
+  background: radial-gradient(
+    circle,
+    rgba(116, 164, 197, 1) 0%,
+    rgba(51, 96, 124, 1) 100%
+  );
+  padding: 4rem 0 4rem 0;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+
+#stats img {
+  position: absolute;
+  width: 550px;
+  left: 0;
+  top: 0;
+  margin-left: -100px;
+  transform: rotate(3deg);
+  z-index: -1;
+}
+
+#stats .container {
+  display: flex;
+}
+
+#stats .container .col-1 {
+  flex: 1;
+}
+
+#stats .container .col-2 {
+  flex: 1;
+}
+
+#stats .container .col-1 h2 {
+  font-size: 2rem;
+  font-family: myFirstFont;
+  font-weight: 100;
+  letter-spacing: 2px;
+  color: var(--light-color);
+}
+
+#stats .container .col-1 p {
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+  color: var(--light-color);
+  max-width: 600px;
+  line-height: 1.7;
+}
+
+#stats .container .col-1 a {
+  margin-top: 3rem;
+  background: var(--light-color);
+  display: inline-block;
+  color: var(--dark-text);
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  padding: 0.7rem 1.7rem;
+  cursor: pointer;
+}
+
+#stats .container .col-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+}
+#stats .container .col-2 .stat p {
+  font-family: "Montserrat", sans-serif;
+  color: var(--light-color);
+  font-size: 1rem;
+}
+
+#stats .container .col-2 .stat .bar {
+  height: 10px;
+  width: 100%;
+  background: #bad2e2;
+  margin-top: 5px;
+}
+#stats .container .col-2 .stat .bar span {
+  height: 10px;
+  background: var(--light-color);
+  display: block;
+  position: relative;
+}
+
+#stats .container .col-2 .stat .bar span label {
+  position: absolute;
+  top: -23px;
+  right: 0;
+  font-family: "Montserrat", sans-serif;
+  color: var(--light-color);
 }
