@@ -8,6 +8,7 @@
 :root {
   --primary-color: #74a4c5;
   --light-color: #f1f4f5;
+  --dark-text: #2c2c2c;
   --max-width: 1100px;
 }
 
@@ -25,7 +26,6 @@
 
 header {
   height: 100vh;
-  width: 100vw;
   background: rgb(116, 164, 197);
   background: radial-gradient(
     circle,
@@ -116,4 +116,65 @@ header nav ul h1 {
 #main svg.right-arrow {
   position: absolute;
   right: 0;
+}
+
+#features {
+  background: var(--light-color);
+  padding: 2rem 0;
+}
+
+#features .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#features .container h2 {
+  font-size: 2rem;
+  font-family: myFirstFont;
+  font-weight: 100;
+  letter-spacing: 2px;
+  color: var(--dark-text);
+}
+
+#features .container > p {
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+  color: #676f75;
+  max-width: 600px;
+  text-align: center;
+}
+
+#features .container .lists {
+  margin-top: 2.5rem;
+  display: flex;
+}
+
+#features .container .lists .list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+#features .container .lists .list h3 {
+  font-size: 1.2rem;
+  font-family: "Montserrat", sans-serif;
+  color: #414141;
+  text-transform: uppercase;
+}
+
+#features .container .lists .list p {
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+  color: #676f75;
+  max-width: 600px;
+  text-align: center;
+}
+
+#features .container .lists .list img {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
 }
