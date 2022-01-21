@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap");
+
+@font-face {
+  font-family: myFirstFont;
+  src: url("../font/olivier_demo.ttf");
+}
+
+:root {
+  --primary-color: #74a4c5;
+  --light-color: #f1f4f5;
+  --max-width: 1100px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+header {
+  height: 100vh;
+  width: 100vw;
+  background: rgb(116, 164, 197);
+  background: radial-gradient(
+    circle,
+    rgba(116, 164, 197, 1) 0%,
+    rgba(51, 96, 124, 1) 100%
+  );
+  position: relative;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 2rem;
+}
+
+header nav ul li {
+  font-family: "Montserrat", sans-serif;
+  list-style: none;
+  color: var(--light-color);
+  font-size: 1rem;
+  font-weight: 300;
+  border-bottom: 1px solid var(--light-color);
+  padding-bottom: 3px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+header nav ul h1 {
+  font-size: 2.7rem;
+  font-family: myFirstFont;
+  color: var(--light-color);
+  font-weight: 400;
+  cursor: pointer;
+  font-style: italic;
+}
+
+#main {
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 0.8;
+  background: url("../img/bread.png") no-repeat center;
+  background-size: 622px 436px;
+  position: relative;
+}
+
+#main h2 {
+  font-size: 6rem;
+  font-family: myFirstFont;
+  color: var(--light-color);
+  font-weight: 400;
+  letter-spacing: 7px;
+}
+
+#main .main-circle {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  gap: 10px;
+}
+#main .main-circle div {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #acc8dc;
+}
+
+#main .main-circle div.active {
+  background: #f1f6f9;
+}
+
+#main svg {
+  fill: #f1f6f9;
+  height: 80px;
+  width: 80px;
+  cursor: pointer;
+}
+
+#main svg.left-arrow {
+  position: absolute;
+  left: 0;
+}
+
+#main svg.right-arrow {
+  position: absolute;
+  right: 0;
+}
