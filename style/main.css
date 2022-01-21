@@ -200,7 +200,7 @@ header nav ul h1 {
     rgba(116, 164, 197, 1) 0%,
     rgba(51, 96, 124, 1) 100%
   );
-  padding: 4rem 0 4rem 0;
+  padding: 4rem 0;
   position: relative;
   overflow: hidden;
   z-index: 0;
@@ -325,4 +325,141 @@ header nav ul h1 {
   width: 120px;
   height: 120px;
   border-radius: 100%;
+}
+
+#footer {
+  background: #2c2c2c;
+  padding: 4rem 0;
+  color: var(--light-color);
+}
+
+#footer .container {
+  display: flex;
+  gap: 20px;
+}
+#footer .container .col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+#footer .container .col.col-1 {
+  position: relative;
+}
+
+#footer .container .col.col-1 h1 {
+  position: absolute;
+  font-size: 2.7rem;
+  font-family: myFirstFont;
+  font-weight: 400;
+  cursor: pointer;
+  font-style: italic;
+  top: 0;
+  left: 0;
+  transform: rotate(-15deg);
+  margin-top: -2rem;
+}
+
+#footer .container .col p {
+  font-size: 0.7rem;
+  line-height: 1.3;
+  font-family: "Montserrat", sans-serif;
+  margin-top: 3rem;
+  color: #cccccc;
+}
+#footer .container .col.col-1 p:nth-child(3) {
+  margin-top: 2rem;
+}
+
+#footer .container .col.col-1 p.footer-logo {
+  display: flex;
+}
+
+#footer .container .col.col-1 p span {
+  display: flex;
+  gap: 20px;
+  padding: 0 10px;
+}
+
+#footer .container .col svg {
+  width: 0.7rem;
+}
+
+#footer .container .col.col-2 h4,
+#footer .container .col.col-3 h4 {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 0.9rem;
+  margin-left: 1.3rem;
+}
+
+#footer .container .col.col-3 h4 {
+  margin: 0;
+}
+
+#footer .container .col.col-2 p {
+  margin-top: 1.9rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+#footer .container .col.col-2 p:nth-child(3) {
+  margin-top: 1.8rem;
+}
+
+#footer .container .col.col-2 p:nth-child(3) svg {
+  width: 1.465rem;
+}
+
+#footer .container .col.col-2 p svg {
+  margin-top: 2px;
+  width: 1.2rem;
+}
+
+#footer .container .col.col-3 {
+  display: flex;
+  flex-direction: column;
+}
+
+#footer .container .col.col-3 .input {
+  display: flex;
+  margin-top: 1.6rem;
+}
+
+#footer .container .col.col-3 .input input {
+  padding: 0.4rem 1.4rem;
+  font-family: "Montserrat", sans-serif;
+  border: none;
+  outline: none;
+  width: 120px;
+  font-size: 0.7rem;
+}
+
+#footer .container .col.col-3 .input a {
+  text-decoration: none;
+  background: #9c7841;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  color: var(--dark-text);
+}
+
+#footer .container .col.col-3 .line {
+  width: 200px;
+  margin-top: 1.6rem;
+  border-bottom: 1px solid var(--light-color);
+}
+
+#footer .container .col.col-3 p {
+  margin-top: 10px;
+}
+#footer .container .col.col-3 p span {
+  color: #9c7841;
 }
