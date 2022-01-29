@@ -192,6 +192,9 @@ header nav ul h1 {
   width: 200px;
   height: 200px;
   border-radius: 100%;
+  transform: scale(0.05);
+  opacity: 0.6;
+  transition: 2s;
 }
 
 #stats {
@@ -207,14 +210,16 @@ header nav ul h1 {
   z-index: 0;
 }
 
-#stats img {
+#stats .stats-bg {
   position: absolute;
   width: 500px;
   left: 0;
   top: 0;
-  margin-left: -100px;
   transform: rotate(3deg);
   z-index: -1;
+  margin-left: -2000px;
+  transition-delay: s;
+  transition-duration: 1.5s;
 }
 
 #stats .container {
@@ -262,6 +267,25 @@ header nav ul h1 {
   gap: 20px;
   justify-content: center;
 }
+
+#stats .container .col-2 .stat:nth-child(1) .bar span {
+  width: 0%;
+  transition: 1.5s;
+  animation: ease-in;
+}
+
+#stats .container .col-2 .stat:nth-child(2) .bar span {
+  width: 0%;
+  transition: 1.5s;
+  animation: ease-in;
+}
+
+#stats .container .col-2 .stat:nth-child(3) .bar span {
+  width: 0%;
+  transition: 1.5s;
+  animation: ease-in;
+}
+
 #stats .container .col-2 .stat p {
   font-family: "Montserrat", sans-serif;
   color: var(--light-color);

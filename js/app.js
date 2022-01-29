@@ -6,6 +6,11 @@ const index1 = document.querySelector(`.main-circle .circle:nth-child(1)`);
 const index2 = document.querySelector(`.main-circle .circle:nth-child(2)`);
 const index3 = document.querySelector(`.main-circle .circle:nth-child(3)`);
 
+const stat = document.querySelector("#stats");
+const statBreadImage = document.querySelector("#stats .stats-bg");
+
+const features = document.querySelector("#features");
+
 let showcaseIndex = 2;
 
 circles.addEventListener("click", (e) => {
@@ -64,3 +69,43 @@ rightArrow.addEventListener("click", (e) => {
     showcaseIndex = 1;
   }
 });
+
+let options = {
+  threshold: 0.7,
+};
+
+let observer1 = new IntersectionObserver(featureAnim, options);
+let observer2 = new IntersectionObserver(breadSlide, options);
+
+function featureAnim(entries) {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      document
+        .querySelectorAll("#features .container .lists .list img")
+        .forEach((item) => {
+          item.style.transform = "scale(1)";
+          item.style.opacity = "1";
+        });
+    }
+  });
+}
+
+function breadSlide(entries) {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      statBreadImage.style.marginLeft = "-200px";
+      document.querySelector(
+        "#stats .container .col-2 .stat:nth-child(1) .bar span"
+      ).style.width = "65%";
+      document.querySelector(
+        "#stats .container .col-2 .stat:nth-child(2) .bar span"
+      ).style.width = "52%";
+      document.querySelector(
+        "#stats .container .col-2 .stat:nth-child(3) .bar span"
+      ).style.width = "74%";
+    }
+  });
+}
+
+observer1.observe(features);
+observer2.observe(stat);
