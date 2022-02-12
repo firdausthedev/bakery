@@ -109,3 +109,10 @@ function breadSlide(entries) {
 
 observer1.observe(features);
 observer2.observe(stat);
+
+// On Page Load
+window.addEventListener("load", (e) => {
+  setTimeout(() => {
+    document.querySelector(".loading").style.display = "none";
+  }, 200);
+});
